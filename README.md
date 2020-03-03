@@ -1,2 +1,2 @@
-# An-Idea
+# React Landing Page
 an idea
