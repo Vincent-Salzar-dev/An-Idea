@@ -1,2 +1,1 @@
-# React Landing Page
-an idea
+# Practice for version control.
