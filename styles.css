@@ -1,0 +1,218 @@
+/* * {
+    box-sizing: border-box;
+} */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Demonstrate a "mostly customized" scrollbar
+ * (won't be visible otherwise if width/height is specified) */
+
+body::-webkit-scrollbar {
+    width: 4px;
+    height: 8px;
+    background-color: #cecece;
+    /* or add it to the track */
+}
+
+
+/* Add a thumb */
+
+body::-webkit-scrollbar-thumb {
+    background: #000;
+    /* background: rgba(67, 145, 241, 0.794); */
+}
+
+.fake-sass {
+    color: #C3979F;
+    color: #BEBBBB;
+    color: #444054;
+    color: #423629;
+    color: #22181C;
+    /* COLORS USED */
+    color: #080705;
+    color: #4392F1;
+    color: rgb(233, 232, 246);
+    font-family: 'Baloo Chettan 2', cursive;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    /* BOLD */
+    font-family: 'Prompt', sans-serif;
+    font-family: 'Anton', sans-serif;
+    font-family: 'Bebas Neue', cursive;
+    /* cursivey */
+    font-family: 'Bellota', cursive;
+}
+
+.first-view {
+    padding: 10vh 0 0 0;
+    min-height: 110vh;
+    background-color: rgb(233, 232, 246);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-end;
+    box-shadow: inset 0px;
+}
+
+.git {
+    position: absolute;
+    top: 1rem;
+    left: 3rem;
+    width: 2rem;
+}
+
+.linkedin {
+    position: absolute;
+    top: 1rem;
+    left: 7rem;
+    width: 1.5rem;
+}
+
+.contact {
+    border: #4392F1 .9px solid;
+    /* border: #423629 .9px solid; */
+    padding: .1rem;
+    position: absolute;
+    top: 1vh;
+    right: 2rem;
+    font-size: 1.5rem;
+    font-family: 'Prompt', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+    letter-spacing: 2px;
+}
+
+.bio {
+    border: #4392F1 .99px solid;
+    /* border: #423629 .9px solid; */
+    padding: .1rem .4em;
+    position: absolute;
+    top: 1vh;
+    right: 13rem;
+    font-size: 1.5rem;
+    font-family: 'Prompt', sans-serif;
+    letter-spacing: 2px;
+}
+
+.greeting {}
+
+.greeting h1 {
+    text-align: center;
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.greeting .heading {}
+
+.greeting .heading h2 {
+    font-size: 1.1rem;
+    text-align: center;
+    /* font-family: 'Prompt', sans-serif; */
+    letter-spacing: 3px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.heading h2 span {
+    font-size: 30px;
+    color: #4392F1;
+    font-weight: 200;
+}
+
+.heading #icon {
+    width: 1rem;
+}
+
+.proj-boxes {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    /* height: 500px; */
+    margin: 0;
+}
+
+.proj-boxes::-webkit-scrollbar {
+    height: 0px;
+    width: 0px;
+    background-color: black;
+}
+
+.proj-boxes::-webkit-scrollbar-thumb {
+    background-color: white;
+}
+
+#box {
+    text-align: center;
+    border-radius: 10px;
+    opacity: 100%;
+    margin: 2rem .8rem;
+    box-shadow: 0 1.9px 2.4px rgba(0, 0, 0, 0.046), 0 4.3px 5.2px rgba(0, 0, 0, 0.065), 0 7.2px 8.7px rgba(0, 0, 0, 0.081), 0 10.9px 13.1px rgba(0, 0, 0, 0.095), 0 15.7px 18.9px rgba(0, 0, 0, 0.109), 0 22.2px 26.8px rgba(0, 0, 0, 0.123), 0 31.4px 37.9px rgba(0, 0, 0, 0.139), 0 45.6px 55.1px rgba(0, 0, 0, 0.157), 0 70.3px 84.9px rgba(0, 0, 0, 0.181), 0 125px 151px rgba(0, 0, 0, 0.23);
+}
+
+#box .heading {
+    color: #303030;
+    font-size: 1.4vw;
+    opacity: 100%;
+    letter-spacing: 4px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#box .heading h1 {
+    color: rgb(48, 48, 48);
+    font-size: 1.7rem;
+    opacity: 100%;
+    letter-spacing: 4px;
+    font-weight: 700;
+}
+
+#box #box-img {
+    position: relative;
+    height: 200px;
+    width: 300px;
+    border-radius: 5px;
+    border: #023C40 solid 2px;
+    box-shadow: 2px 2px 0px 10px #4392F1;
+}
+
+#box .overlay {
+    position: relative;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+#box .overlay #hidden {
+    transition: opacity 1s;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    height: 200px;
+    width: 400px;
+    background-color: black;
+    display: flex;
+}
+
+#box .overlay #hidden:hover {
+    transition: opacity 1s;
+    opacity: .5;
+}
+
+#box .overlay #hidden div {
+    color: #4392F1;
+    align-self: center;
+    padding-left: 3rem;
+}
+
+.footer {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(8, 69, 150, 1) 55%, rgba(10, 93, 190, 1) 100%, rgba(0, 212, 255, 1) 100%);
+    height: 40vh;
+}
+
+.footer .social {}
