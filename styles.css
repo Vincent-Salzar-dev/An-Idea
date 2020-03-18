@@ -1,32 +1,24 @@
-/* * {
+* {
     box-sizing: border-box;
-} */
+}
 
 body {
     margin: 0;
     padding: 0;
+    height: 100vh;
 }
-
-
-/* Demonstrate a "mostly customized" scrollbar
- * (won't be visible otherwise if width/height is specified) */
 
 body::-webkit-scrollbar {
     width: 4px;
     height: 8px;
     background-color: #cecece;
-    /* or add it to the track */
 }
-
-
-/* Add a thumb */
 
 body::-webkit-scrollbar-thumb {
     background: #000;
-    /* background: rgba(67, 145, 241, 0.794); */
 }
 
-.fake-sass {
+Fake Sass {
     color: #C3979F;
     color: #BEBBBB;
     color: #444054;
@@ -48,9 +40,15 @@ body::-webkit-scrollbar-thumb {
     font-family: 'Bellota', cursive;
 }
 
+.background {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(8, 69, 150, 1) 55%, rgba(10, 93, 190, 1) 100%, rgba(0, 212, 255, 1) 100%);
+    height: 100vh;
+}
+
 .first-view {
-    padding: 10vh 0 0 0;
-    min-height: 110vh;
+    padding: 18vh 0 0 0;
+    min-height: 95vh;
     background-color: rgb(233, 232, 246);
     display: flex;
     flex-direction: column;
@@ -73,22 +71,33 @@ body::-webkit-scrollbar-thumb {
     width: 1.5rem;
 }
 
+.twitter {
+    position: absolute;
+    top: 1rem;
+    left: 10rem;
+    width: 1.5rem;
+}
+
 .contact {
-    border: #4392F1 .9px solid;
-    /* border: #423629 .9px solid; */
-    padding: .1rem;
+    border: #4392F1 .95px solid;
+    padding: .1rem .4rem;
     position: absolute;
     top: 1vh;
     right: 2rem;
     font-size: 1.5rem;
     font-family: 'Prompt', sans-serif;
-    /* font-family: 'Roboto', sans-serif; */
     letter-spacing: 2px;
+    text-decoration: none;
+    color: #080705;
 }
 
-.bio {
+.contact:hover {
+    cursor: pointer;
+    border: #4392F1 1.2px solid;
+}
+
+.about {
     border: #4392F1 .99px solid;
-    /* border: #423629 .9px solid; */
     padding: .1rem .4em;
     position: absolute;
     top: 1vh;
@@ -96,16 +105,23 @@ body::-webkit-scrollbar-thumb {
     font-size: 1.5rem;
     font-family: 'Prompt', sans-serif;
     letter-spacing: 2px;
+    text-decoration: none;
+    color: #080705;
+}
+
+.about:hover {
+    cursor: pointer;
+    border: #4392F1 1.2px solid;
 }
 
 .greeting {}
 
 .greeting h1 {
     text-align: center;
-    /* font-family: 'Open Sans', sans-serif; */
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     letter-spacing: 2px;
     font-weight: 500;
+    margin: 1rem 0rem;
 }
 
 .greeting .heading {}
@@ -113,7 +129,6 @@ body::-webkit-scrollbar-thumb {
 .greeting .heading h2 {
     font-size: 1.1rem;
     text-align: center;
-    /* font-family: 'Prompt', sans-serif; */
     letter-spacing: 3px;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
@@ -133,8 +148,7 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    /* height: 500px; */
-    margin: 0;
+    margin: 0 0 5rem 0;
 }
 
 .proj-boxes::-webkit-scrollbar {
@@ -153,6 +167,13 @@ body::-webkit-scrollbar-thumb {
     opacity: 100%;
     margin: 2rem .8rem;
     box-shadow: 0 1.9px 2.4px rgba(0, 0, 0, 0.046), 0 4.3px 5.2px rgba(0, 0, 0, 0.065), 0 7.2px 8.7px rgba(0, 0, 0, 0.081), 0 10.9px 13.1px rgba(0, 0, 0, 0.095), 0 15.7px 18.9px rgba(0, 0, 0, 0.109), 0 22.2px 26.8px rgba(0, 0, 0, 0.123), 0 31.4px 37.9px rgba(0, 0, 0, 0.139), 0 45.6px 55.1px rgba(0, 0, 0, 0.157), 0 70.3px 84.9px rgba(0, 0, 0, 0.181), 0 125px 151px rgba(0, 0, 0, 0.23);
+    transition: box-shadow 2s;
+}
+
+#box:hover {
+    transition: box-shadow 1.5s;
+    box-shadow: 0 2.7px 1.2px rgba(0, 0, 0, 0.091), 0 5.9px 2.7px rgba(0, 0, 0, 0.133), 0 9.8px 4.6px rgba(0, 0, 0, 0.165), 0 14.9px 6.9px rgba(0, 0, 0, 0.191), 0 21.4px 10px rgba(0, 0, 0, 0.215), 0 30.3px 14.2px rgba(0, 0, 0, 0.239), 0 43px 20.1px rgba(0, 0, 0, 0.265), 0 62.4px 29.2px rgba(0, 0, 0, 0.297), 0 96.2px 45px rgba(0, 0, 0, 0.339), 0 171px 80px rgba(0, 0, 0, 0.43);
+    transform: scale(2);
 }
 
 #box .heading {
@@ -168,7 +189,7 @@ body::-webkit-scrollbar-thumb {
     font-size: 1.7rem;
     opacity: 100%;
     letter-spacing: 4px;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 #box #box-img {
@@ -177,7 +198,7 @@ body::-webkit-scrollbar-thumb {
     width: 300px;
     border-radius: 5px;
     border: #023C40 solid 2px;
-    box-shadow: 2px 2px 0px 10px #4392F1;
+    box-shadow: 2px 2px 0px 10px rgb(0, 0, 0);
 }
 
 #box .overlay {
